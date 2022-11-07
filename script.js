@@ -26,6 +26,11 @@ function addBookToLibrary() {
         currentBook.classList.add("book-card");
         document.querySelector(".main-container").appendChild(currentBook);
 
+        //Creates the top section of the book card
+        let currentBookTop = document.createElement("div");
+        currentBookTop.classList.add("book-top")
+        currentBook.appendChild(currentBookTop);
+
         //Creates the status button
         let currentStatus = document.createElement("button");
         if (myLibrary[i].status == false) {
@@ -35,7 +40,7 @@ function addBookToLibrary() {
             currentStatus.classList.add("status-button-true");
             currentStatus.textContent = "Read";
         }
-        currentBook.appendChild(currentStatus);
+        currentBookTop.appendChild(currentStatus);
         currentStatus.addEventListener("click", () => {
             if (currentStatus.className == "status-button-false") {
                 currentStatus.className = "status-button-true";
@@ -45,6 +50,12 @@ function addBookToLibrary() {
                 currentStatus.textContent = "Not Read";
             }
         });
+
+        //Create the delete button
+        let currentDelete = document.createElement("button");
+        currentDelete.classList.add("delete-button");
+        currentDelete.textContent = "X";
+        currentBookTop.appendChild(currentDelete);
     }
 }
 
