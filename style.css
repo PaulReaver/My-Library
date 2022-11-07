@@ -50,4 +50,29 @@ h1 {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
     border: 1px solid var(--light-primary-color);
     border-radius: 16px 4px 4px 16px;
+    padding: 1.25rem 0rem;
+}
+
+.status-button-false,
+.status-button-true {
+    width: 7.813rem;
+    color: var(--primary-text-color);
+    font-size: 1.125rem;
+    font-style: italic;
+    padding: 0.313rem 0rem;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    border-style: none;
+}
+
+.status-button-false {
+    background-color: var(--red-color);
+}
+
+.status-button-true {
+    background-color: var(--green-color);
+}
+
+.status-button-false:hover,
+.status-button-true:hover {
+    cursor: pointer;
 }
