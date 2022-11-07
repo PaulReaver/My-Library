@@ -56,6 +56,9 @@ function addBookToLibrary() {
         currentDelete.classList.add("delete-button");
         currentDelete.textContent = "X";
         currentBookTop.appendChild(currentDelete);
+        currentDelete.addEventListener("click", () => {
+            currentBook.remove();
+        })
     }
 }
 
