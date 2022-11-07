@@ -51,7 +51,7 @@ function addBookToLibrary() {
             }
         });
 
-        //Create the delete button
+        //Creates the delete button
         let currentDelete = document.createElement("button");
         currentDelete.classList.add("delete-button");
         currentDelete.textContent = "X";
@@ -59,6 +59,34 @@ function addBookToLibrary() {
         currentDelete.addEventListener("click", () => {
             currentBook.remove();
         })
+
+        //Creates the middle section of the card
+        let currentBookMiddle = document.createElement("div");
+        currentBookMiddle.classList.add("book-middle");
+        currentBook.appendChild(currentBookMiddle);
+
+        //Creates the title of the book
+        let currentTitle = document.createElement("h4");
+        currentTitle.classList.add("book-title");
+        currentTitle.textContent = `"${myLibrary[i].title}"`;
+        currentBookMiddle.appendChild(currentTitle);
+
+        //Creates the author of the book
+        let currentAuthor = document.createElement("h5");
+        currentAuthor.classList.add("book-author");
+        currentAuthor.textContent = `by ${myLibrary[i].author}`;
+        currentBookMiddle.appendChild(currentAuthor);
+
+        //Creates the bottom section of the card
+        let currentBookBottom = document.createElement("div");
+        currentBookBottom.classList.add("book-bottom");
+        currentBook.appendChild(currentBookBottom);
+
+        //Creates the pages of the book
+        let currentPages = document.createElement("h5");
+        currentPages.classList.add("book-pages");
+        currentPages.textContent = `${myLibrary[i].pages} Pages`;
+        currentBookBottom.appendChild(currentPages);
     }
 }
 
