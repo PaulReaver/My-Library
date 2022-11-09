@@ -1,12 +1,6 @@
 //Array that holds all book objects
 let myLibrary = [
     new Book("Ninja Techniques", "Sensei", 23, false),
-    new Book("Cooking Styles", "The Chef", 243, true),
-    new Book("Cooking Styles", "The Chef", 243, true),
-    new Book("Cooking Styles", "The Chef", 243, true),
-    new Book("Cooking Styles", "The Chef", 243, true),
-    new Book("Cooking Styles", "The Chef", 243, true),
-    new Book("Cooking Styles", "The Chef", 243, true),
     new Book("Cooking Styles", "The Chef", 243, true)
 ];
 
