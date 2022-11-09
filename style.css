@@ -148,12 +148,26 @@ h1 {
 
 #form-container {
     height: 200px;
+    width: 200px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 40px;
+    border-style: none;
+    border-radius: 1rem;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent-color);
 }
 
 .hidden {
-    display:none;
+    display: none;
 }
 
 .visible {
     display: block;
+}
+
+.close-button-container {
+    display: flex;
+    justify-content: end;
 }

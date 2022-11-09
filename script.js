@@ -85,7 +85,7 @@ function addBookToLibrary() {
 }
 
 //Gets form container
-const formStatus = document.querySelector("#form-container");
+const formVisibility = document.querySelector("#form-container");
 
 //Add book button
 const addBookButton = document.querySelector(".add-book-button");
@@ -97,10 +97,10 @@ closeFormButton.addEventListener("click", changeFormVisibility);
 
 //Function that changes form visibility
 function changeFormVisibility () {
-    if (formStatus.className == "hidden") {
-        formStatus.className = "visible";
+    if (formVisibility.className == "hidden") {
+        formVisibility.className = "visible";
     } else {
-        formStatus.className = "hidden";
+        formVisibility.className = "hidden";
     }
 }
 
