@@ -84,4 +84,24 @@ function addBookToLibrary() {
     }
 }
 
+//Gets form container
+const formStatus = document.querySelector("#form-container");
+
+//Add book button
+const addBookButton = document.querySelector(".add-book-button");
+addBookButton.addEventListener("click", changeFormVisibility);
+
+//Close form button
+const closeFormButton = document.querySelector(".close-form-button");
+closeFormButton.addEventListener("click", changeFormVisibility);
+
+//Function that changes form visibility
+function changeFormVisibility () {
+    if (formStatus.className == "hidden") {
+        formStatus.className = "visible";
+    } else {
+        formStatus.className = "hidden";
+    }
+}
+
 addBookToLibrary();
