@@ -131,15 +131,12 @@ h1 {
     position: fixed;
     bottom: 60px;
     right: 110px;
-    width: 80px;
-    height: 80px;
     border-style: none;
-    border-radius: 40px;
     background-color: var(--accent-color);
     color: var(--primary-text-color);
-    font-size: 65px;
-    text-align: center;
-    vertical-align: middle;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 1rem;
 }
 
 .add-book-button:hover {
