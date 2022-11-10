@@ -8,7 +8,6 @@
     --accent-color: #CC9544;
     --primary-text-color: #FFFFFF;
     --secondary-text-color: #757575;
-    --light-secondary-text-color: #BDBDBD;
     --red-color: #A51515;
     --green-color: #3a8311;
 }
@@ -153,7 +152,7 @@ h1 {
     left: 50%;
     top: 50%;
     padding: 40px;
-    border-style: none;
+    border: 1px var(--secondary-text-color) solid;
     border-radius: 1rem;
     transform: translate(-50%, -50%);
     background-color: var(--accent-color);
@@ -196,8 +195,8 @@ form {
 }
 
 .input-group > input[type = "text"],
-.input-group > input[type = number] {
-    border-style: none;
+.input-group > input[type = "number"] {
+    border: 2px white solid;
     vertical-align: middle;
     padding: 5px 10px;
     border-radius: 8px;
@@ -236,4 +235,14 @@ button[type = "submit"] {
 button[type = "submit"]:hover {
     cursor: pointer;
     filter: brightness(120%);
+}
+
+button[type = "submit"]:active {
+    filter: brightness(100%);
+}
+
+.input-group > input[type = "text"]:focus,
+.input-group > input[type = "number"]:focus {
+    outline:none;
+    border: 2px var(--secondary-text-color) solid;
 }
