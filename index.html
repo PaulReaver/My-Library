@@ -22,6 +22,30 @@
         <div class="close-button-container">
             <button class="close-form-button">X</button>
         </div>
+        <form action="script.js" method="dialog">
+            <div class="input-group">
+                <label for="title">Title</label>
+                <br>
+                <input type="text" id="title" name="title" placeholder="Title of the book" required>
+            </div>
+            <div class="input-group">
+                <label for="author">Author</label>
+                <br>
+                <input type="text" id="author" name="author" placeholder="Author of the book" required>
+            </div>
+            <div class="input-group">
+                <label for="pages">Pages</label>
+                <br>
+                <input type="number" id="pages" name="pages" placeholder="1" min="1" required>
+            </div>
+            <div class="checkbox-group">
+                <label for="checkbox">Have you read the book?</label>
+                <input type="checkbox" name="checkbox" id="checkbox">
+            </div>
+            <div class="submit-button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </div>
     <div class="hidden" id="darken-screen"></div>
 </body>
