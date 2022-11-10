@@ -87,6 +87,10 @@ function addBookToLibrary() {
 //Gets form container
 const formVisibility = document.querySelector("#form-container");
 
+//Gets darken screen div
+const darkenScreen = document.querySelector("#darken-screen");
+darkenScreen.addEventListener("click", changeFormVisibility);
+
 //Add book button
 const addBookButton = document.querySelector(".add-book-button");
 addBookButton.addEventListener("click", changeFormVisibility);
@@ -96,11 +100,13 @@ const closeFormButton = document.querySelector(".close-form-button");
 closeFormButton.addEventListener("click", changeFormVisibility);
 
 //Function that changes form visibility
-function changeFormVisibility () {
+function changeFormVisibility() {
     if (formVisibility.className == "hidden") {
         formVisibility.className = "visible";
+        darkenScreen.className = "visible"
     } else {
         formVisibility.className = "hidden";
+        darkenScreen.className = "hidden";
     }
 }
 
