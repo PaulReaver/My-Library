@@ -110,4 +110,19 @@ function changeFormVisibility() {
     }
 }
 
+//Gets the form values
+const myForm = document.querySelector("form");
+myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let myTitle = document.getElementById("title").value;
+    let myAuthor = document.getElementById("author").value;
+    let myPages = document.getElementById("pages").value;
+    let myCheckbox = document.getElementById("checkbox").checked;
+
+    console.log(myTitle);
+    console.log(myAuthor);
+    console.log(myPages);
+    console.log(myCheckbox);
+})
+
 addBookToLibrary();
