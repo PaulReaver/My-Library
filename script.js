@@ -1,7 +1,8 @@
 //Array that holds all book objects
 let myLibrary = [
     new Book("Ninja Techniques", "Sensei", 23, false),
-    new Book("Cooking Styles", "The Chef", 243, true)
+    new Book("Cooking Styles", "The Chef", 243, true),
+    new Book("Running Man", "The Runner", 52, false)
 ];
 
 //Constructor of book objects
@@ -11,6 +12,9 @@ function Book(title, author, pages, status) {
     this.pages = pages;
     this.status = status;
 }
+
+//Gets the main container where the books are displayed
+const mainContainer = document.querySelector(".main-container");
 
 //Adds book objects to the library
 function addBookToLibrary() {
@@ -51,7 +55,19 @@ function addBookToLibrary() {
         currentDelete.textContent = "X";
         currentBookTop.appendChild(currentDelete);
         currentDelete.addEventListener("click", () => {
-            currentBook.remove();
+            if (myLibrary.length == 1) {
+                myLibrary.length = 0;
+            } else {
+                myLibrary.splice(i, 1);
+            }
+
+            //Removes all the books from the DOM
+            while (mainContainer.firstChild) {
+                mainContainer.removeChild(mainContainer.firstChild);
+            }
+
+            //Populates the DOM with books based on library array
+            addBookToLibrary();
         })
 
         //Creates the middle section of the card
