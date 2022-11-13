@@ -1,9 +1,5 @@
 //Array that holds all book objects
-let myLibrary = [
-    new Book("Ninja Techniques", "Sensei", 23, false),
-    new Book("Cooking Styles", "The Chef", 243, true),
-    new Book("Running Man", "The Runner", 52, false)
-];
+let myLibrary = [];
 
 //Constructor of book objects
 function Book(title, author, pages, status) {
@@ -12,6 +8,14 @@ function Book(title, author, pages, status) {
     this.pages = pages;
     this.status = status;
 }
+
+//Pushes some books in the library array
+myLibrary.push(new Book("Running Man", "The Runner", 52, false));
+myLibrary.push(new Book("Cooking Styles", "The Chef", 243, true));
+myLibrary.push(new Book("Ninja Techniques", "Sensei", 23, false));
+
+//Initial adding book to library
+addBookToLibrary();
 
 //Gets the main container where the books are displayed
 const mainContainer = document.querySelector(".main-container");
@@ -61,13 +65,8 @@ function addBookToLibrary() {
             //Remove current book object from array
             myLibrary.splice(i, 1);
 
-            //Removes all the books from the DOM
-            while (mainContainer.firstChild) {
-                mainContainer.removeChild(mainContainer.firstChild);
-            }
-
-            //Populates the DOM with books based on library array
-            addBookToLibrary();
+            //Calls function to repopulate the DOM with books
+            repopulate();
         })
 
         //Creates the middle section of the card
@@ -135,10 +134,22 @@ myForm.addEventListener("submit", (e) => {
     let myPages = document.getElementById("pages").value;
     let myCheckbox = document.getElementById("checkbox").checked;
 
-    console.log(myTitle);
-    console.log(myAuthor);
-    console.log(myPages);
-    console.log(myCheckbox);
+    //Pushes submited book to the library
+    myLibrary.push(new Book(myTitle, myAuthor, myPages, myCheckbox));
+
+    //Repopulates the DOM with books
+    repopulate ();
+
 })
 
-addBookToLibrary();
+//Removes DOM books and repopulates
+function repopulate() {
+
+    //Removes all the books from the DOM
+    while (mainContainer.firstChild) {
+        mainContainer.removeChild(mainContainer.firstChild);
+    }
+
+    //Populates the DOM with books based on library array
+    addBookToLibrary();
+}
