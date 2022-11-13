@@ -68,21 +68,18 @@ h1 {
 
 .status-button-false {
     background-color: var(--red-color);
+    transition: background-color 0.2s ease-in-out;
 }
 
 .status-button-true {
     background-color: var(--green-color);
+    transition: background-color 0.2s ease-in-out;
 }
 
 .status-button-false:hover,
 .status-button-true:hover {
     cursor: pointer;
     filter: brightness(120%);
-}
-
-.status-button-false:active,
-.status-button-true:active {
-    filter: brightness(100%);
 }
 
 .book-top {
@@ -103,6 +100,7 @@ h1 {
 .delete-button:hover,
 .close-form-button:hover {
     cursor: pointer;
+    color: var(--red-color);
 }
 
 .book-middle {
@@ -160,23 +158,32 @@ h1 {
     border-style: none;
     border-radius: 1rem;
     transform: translate(-50%, -50%);
+    transform-origin: 0% 0%;
     background-color: var(--accent-color);
 }
 
 .hidden-form {
     visibility: hidden;
+    scale: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 .visible-form {
     visibility: visible;
+    scale: 1;
+    transition: all 0.2s ease-in-out;
 }
 
 .hidden-dark {
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
 }
 
 .visible-dark {
     visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease;
 }
 
 .close-button-container {

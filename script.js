@@ -120,12 +120,12 @@ function changeFormVisibility() {
     if (formVisibility.className == "hidden-form") {
         formVisibility.className = "visible-form";
         darkenScreen.className = "visible-dark"
-    } else {
-        formVisibility.className = "hidden-form";
-        darkenScreen.className = "hidden-dark";
 
         //Resets the form values
         myForm.reset();
+    } else {
+        formVisibility.className = "hidden-form";
+        darkenScreen.className = "hidden-dark";
     }
 }
 
