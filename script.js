@@ -9,19 +9,20 @@ function Book(title, author, pages, status) {
     this.status = status;
 }
 
-//Pushes some books in the library array
+//Push some books in the library array
 myLibrary.push(new Book("Running Man", "The Runner", 52, false));
 myLibrary.push(new Book("Cooking Styles", "The Chef", 243, true));
 myLibrary.push(new Book("Ninja Techniques", "Sensei", 23, false));
 
-//Initial adding book to library
+//Calls function to add the book objects to the DOM
 addBookToLibrary();
 
 //Gets the main container where the books are displayed
 const mainContainer = document.querySelector(".main-container");
 
-//Adds book objects to the library
+//Functions that adds book objects to the DOM
 function addBookToLibrary() {
+    //Iterates through the library array
     for (let i = 0; i < myLibrary.length; i++) {
         //Creates book card with a class
         let currentBook = document.createElement("div")
@@ -62,7 +63,7 @@ function addBookToLibrary() {
         currentBookTop.appendChild(currentDelete);
         currentDelete.addEventListener("click", () => {
 
-            //Remove current book object from array
+            //Removes current book object from array
             myLibrary.splice(i, 1);
 
             //Calls function to repopulate the DOM with books
@@ -122,6 +123,9 @@ function changeFormVisibility() {
     } else {
         formVisibility.className = "hidden";
         darkenScreen.className = "hidden";
+
+        //Resets the form values
+        myForm.reset();
     }
 }
 
@@ -138,8 +142,10 @@ myForm.addEventListener("submit", (e) => {
     myLibrary.push(new Book(myTitle, myAuthor, myPages, myCheckbox));
 
     //Repopulates the DOM with books
-    repopulate ();
+    repopulate();
 
+    //Hides the form when it is submitted 
+    changeFormVisibility();
 })
 
 //Removes DOM books and repopulates
@@ -150,6 +156,6 @@ function repopulate() {
         mainContainer.removeChild(mainContainer.firstChild);
     }
 
-    //Populates the DOM with books based on library array
+    //Repopulates the DOM with books based on library array
     addBookToLibrary();
 }

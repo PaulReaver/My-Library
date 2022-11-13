@@ -80,6 +80,11 @@ h1 {
     filter: brightness(120%);
 }
 
+.status-button-false:active,
+.status-button-true:active {
+    filter: brightness(100%);
+}
+
 .book-top {
     display: flex;
     justify-content: space-between;
