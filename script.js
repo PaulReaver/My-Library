@@ -117,12 +117,12 @@ closeFormButton.addEventListener("click", changeFormVisibility);
 
 //Function that changes form visibility
 function changeFormVisibility() {
-    if (formVisibility.className == "hidden") {
-        formVisibility.className = "visible";
-        darkenScreen.className = "visible"
+    if (formVisibility.className == "hidden-form") {
+        formVisibility.className = "visible-form";
+        darkenScreen.className = "visible-dark"
     } else {
-        formVisibility.className = "hidden";
-        darkenScreen.className = "hidden";
+        formVisibility.className = "hidden-form";
+        darkenScreen.className = "hidden-dark";
 
         //Resets the form values
         myForm.reset();

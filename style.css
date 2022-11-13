@@ -163,12 +163,20 @@ h1 {
     background-color: var(--accent-color);
 }
 
-.hidden {
-    display: none;
+.hidden-form {
+    visibility: hidden;
 }
 
-.visible {
-    display: block;
+.visible-form {
+    visibility: visible;
+}
+
+.hidden-dark {
+    visibility: hidden;
+}
+
+.visible-dark {
+    visibility: visible;
 }
 
 .close-button-container {
