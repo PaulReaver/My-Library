@@ -43,9 +43,11 @@ function addBookToLibrary() {
             if (currentStatus.className == "status-button-false") {
                 currentStatus.className = "status-button-true";
                 currentStatus.textContent = "Read";
+                myLibrary[i].status = true;
             } else {
                 currentStatus.className = "status-button-false";
                 currentStatus.textContent = "Not Read";
+                myLibrary[i].status = false;
             }
         });
 
