@@ -57,11 +57,9 @@ function addBookToLibrary() {
         currentDelete.textContent = "X";
         currentBookTop.appendChild(currentDelete);
         currentDelete.addEventListener("click", () => {
-            if (myLibrary.length == 1) {
-                myLibrary.length = 0;
-            } else {
-                myLibrary.splice(i, 1);
-            }
+
+            //Remove current book object from array
+            myLibrary.splice(i, 1);
 
             //Removes all the books from the DOM
             while (mainContainer.firstChild) {
