@@ -123,6 +123,7 @@ function changeFormVisibility() {
 
         //Resets the form values
         myForm.reset();
+
     } else {
         formVisibility.className = "hidden-form";
         darkenScreen.className = "hidden-dark";

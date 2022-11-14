@@ -152,6 +152,11 @@ h1 {
     transition: scale 0.1s ease-in-out;
 }
 
+.add-book-button:active {
+    scale: 1;
+    filter: brightness(80%);
+}
+
 #form-container {
     z-index: 1;
     position: fixed;
