@@ -68,12 +68,12 @@ h1 {
 
 .status-button-false {
     background-color: var(--red-color);
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-out;
 }
 
 .status-button-true {
     background-color: var(--green-color);
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.2s ease-out;
 }
 
 .status-button-false:hover,
@@ -143,13 +143,13 @@ h1 {
     font-weight: bold;
     padding: 20px;
     border-radius: 1rem;
-    transition: scale 0.1s ease-in-out;
+    transition: scale 0.1s ease-out;
 }
 
 .add-book-button:hover {
     cursor: pointer;
     scale: 1.1;
-    transition: scale 0.1s ease-in-out;
+    transition: scale 0.1s ease-out;
 }
 
 .add-book-button:active {
@@ -173,13 +173,13 @@ h1 {
 .hidden-form {
     visibility: hidden;
     scale: 0;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-out;
 }
 
 .visible-form {
     visibility: visible;
     scale: 1;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-out;
 }
 
 .hidden-dark {
