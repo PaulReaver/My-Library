@@ -9,6 +9,11 @@ function Book(title, author, pages, status) {
     this.status = status;
 }
 
+//Function that changes status of each book assigned on its prototype
+Book.prototype.changeStatus = function () {
+    this.status = !this.status;
+}
+
 //Push some books in the library array
 myLibrary.push(new Book("Running Man", "The Runner", 52, false));
 myLibrary.push(new Book("Cooking Styles", "The Chef", 243, true));
@@ -48,11 +53,11 @@ function addBookToLibrary() {
             if (currentStatus.className == "status-button-false") {
                 currentStatus.className = "status-button-true";
                 currentStatus.textContent = "Read";
-                myLibrary[i].status = true;
+                myLibrary[i].changeStatus();
             } else {
                 currentStatus.className = "status-button-false";
                 currentStatus.textContent = "Not Read";
-                myLibrary[i].status = false;
+                myLibrary[i].changeStatus();
             }
         });
 
