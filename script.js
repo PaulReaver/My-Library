@@ -1,17 +1,31 @@
 //Array that holds all book objects
 let myLibrary = [];
 
-//Constructor of book objects
-function Book(title, author, pages, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-}
+// //Constructor of book objects
+// function Book(title, author, pages, status) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.status = status;
+// }
 
 //Function that changes status of each book assigned on its prototype
-Book.prototype.changeStatus = function () {
-    this.status = !this.status;
+// Book.prototype.changeStatus = function () {
+//     this.status = !this.status;
+// }
+
+//Class that creates book objects and changes read status 
+class Book {
+    constructor (title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status
+    }
+
+    changeStatus () {
+        this.status = !this.status;
+    }
 }
 
 //Push some books in the library array
