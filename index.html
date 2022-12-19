@@ -1,53 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Library</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Library</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-
-<body>
-    <header>
-        <h1>My Library</h1>
-    </header>
-    <div class="main-container">
-
-    </div>
-    <button class="add-book-button">Add Book</button>
-    <div class="hidden-form" id="form-container">
-        <div class="close-button-container">
-            <button class="close-form-button">X</button>
+    <body>
+        <header>
+            <h1>My Library</h1>
+        </header>
+        <div class="main-container"></div>
+        <button class="add-book-button">Add Book</button>
+        <div class="hidden-form" id="form-container">
+            <div class="close-button-container">
+                <button class="close-form-button">X</button>
+            </div>
+            <form>
+                <div class="input-group">
+                    <label for="title">Title</label>
+                    <br />
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Title of the book"
+                        required
+                    />
+                </div>
+                <div class="input-group">
+                    <label for="author">Author</label>
+                    <br />
+                    <input
+                        type="text"
+                        id="author"
+                        name="author"
+                        placeholder="Author of the book"
+                        required
+                    />
+                </div>
+                <div class="input-group">
+                    <label for="pages">Pages</label>
+                    <br />
+                    <input
+                        type="number"
+                        id="pages"
+                        name="pages"
+                        placeholder="1"
+                        min="1"
+                        required
+                    />
+                </div>
+                <div class="checkbox-group">
+                    <label for="checkbox">Have you read the book?</label>
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                </div>
+                <div class="submit-button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-        <form>
-            <div class="input-group">
-                <label for="title">Title</label>
-                <br>
-                <input type="text" id="title" name="title" placeholder="Title of the book" required>
-            </div>
-            <div class="input-group">
-                <label for="author">Author</label>
-                <br>
-                <input type="text" id="author" name="author" placeholder="Author of the book" required>
-            </div>
-            <div class="input-group">
-                <label for="pages">Pages</label>
-                <br>
-                <input type="number" id="pages" name="pages" placeholder="1" min="1" required>
-            </div>
-            <div class="checkbox-group">
-                <label for="checkbox">Have you read the book?</label>
-                <input type="checkbox" name="checkbox" id="checkbox">
-            </div>
-            <div class="submit-button-container">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
-    <div class="hidden-dark" id="darken-screen"></div>
-</body>
-
+        <div class="hidden-dark" id="darken-screen"></div>
+    </body>
 </html>

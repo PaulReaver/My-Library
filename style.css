@@ -3,12 +3,12 @@
 :root {
     font-family: 'Poppins', sans-serif;
     --primary-color: #361500;
-    --dark-primary-color: #1C0A00;
+    --dark-primary-color: #1c0a00;
     --light-primary-color: #603601;
-    --accent-color: #CC9544;
-    --primary-text-color: #FFFFFF;
+    --accent-color: #cc9544;
+    --primary-text-color: #ffffff;
     --secondary-text-color: #757575;
-    --red-color: #A51515;
+    --red-color: #a51515;
     --green-color: #3a8311;
 }
 
@@ -216,14 +216,14 @@ form {
     gap: 60px;
 }
 
-.input-group>label,
-.checkbox-group>label {
+.input-group > label,
+.checkbox-group > label {
     color: var(--primary-text-color);
     font-size: 1.5rem;
 }
 
-.input-group>input[type="text"],
-.input-group>input[type="number"] {
+.input-group > input[type='text'],
+.input-group > input[type='number'] {
     border: 2px white solid;
     vertical-align: middle;
     padding: 5px 10px;
@@ -239,7 +239,7 @@ form {
     align-items: center;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
     width: 1.5rem;
     height: 1.5rem;
     accent-color: var(--green-color);
@@ -250,7 +250,7 @@ input[type="checkbox"] {
     justify-content: center;
 }
 
-button[type="submit"] {
+button[type='submit'] {
     width: fit-content;
     font-size: 1.5rem;
     padding: 10px 20px;
@@ -260,17 +260,17 @@ button[type="submit"] {
     color: var(--primary-text-color);
 }
 
-button[type="submit"]:hover {
+button[type='submit']:hover {
     cursor: pointer;
     filter: brightness(120%);
 }
 
-button[type="submit"]:active {
+button[type='submit']:active {
     filter: brightness(100%);
 }
 
-.input-group>input[type="text"]:focus,
-.input-group>input[type="number"]:focus {
+.input-group > input[type='text']:focus,
+.input-group > input[type='number']:focus {
     outline: none;
     border: 2px var(--secondary-text-color) solid;
 }
