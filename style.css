@@ -5,9 +5,9 @@
     --primary-color: #361500;
     --dark-primary-color: #1c0a00;
     --light-primary-color: #603601;
-    --accent-color: #cc9544;
+    --accent-color: hsl(36, 57%, 42%);
     --primary-text-color: #ffffff;
-    --secondary-text-color: #757575;
+    --secondary-text-color: #858585;
     --red-color: #a51515;
     --green-color: #3a8311;
 }
@@ -31,6 +31,7 @@ header {
 
 h1 {
     color: var(--primary-text-color);
+    cursor: default;
 }
 
 .main-container {

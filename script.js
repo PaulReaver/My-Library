@@ -88,13 +88,13 @@ function addBookToLibrary() {
         currentBook.appendChild(currentBookMiddle);
 
         // Creates the title of the book
-        const currentTitle = document.createElement('h4');
+        const currentTitle = document.createElement('h2');
         currentTitle.classList.add('book-title');
         currentTitle.textContent = `"${myLibrary[i].title}"`;
         currentBookMiddle.appendChild(currentTitle);
 
         // Creates the author of the book
-        const currentAuthor = document.createElement('h5');
+        const currentAuthor = document.createElement('h3');
         currentAuthor.classList.add('book-author');
         currentAuthor.textContent = `by ${myLibrary[i].author}`;
         currentBookMiddle.appendChild(currentAuthor);
@@ -105,7 +105,7 @@ function addBookToLibrary() {
         currentBook.appendChild(currentBookBottom);
 
         // Creates the pages of the book
-        const currentPages = document.createElement('h5');
+        const currentPages = document.createElement('h3');
         currentPages.classList.add('book-pages');
         currentPages.textContent = `${myLibrary[i].pages} Pages`;
         currentBookBottom.appendChild(currentPages);
