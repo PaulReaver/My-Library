@@ -1,5 +1,5 @@
 # My Library
-A digital library for tracking books. Users can add or remove books, including title, author, page count, and read status.
+A digital library for tracking books. Users can add or remove books, including title, author, page count, and read status. This was created as part of The Odin Project curriculum.
 
 ## Motivation
 This project was made to:
