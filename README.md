@@ -5,7 +5,8 @@ A digital library for tracking books. Users can add or remove books, including t
 This project was made to:
 - Experiment with vintage design styles.
 - Learn how to effectively handle user-generated content and present it in a specific format.
-- Understand how to address user modifications in existing data. 
+- Understand how to address user modifications in existing data.
+- Familiarize myself with basic constraint validation to display custom messages.
 
 ## Quick Start
 Publicly available at the following link: https://paulreaver.github.io/My-Library/
