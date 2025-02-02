@@ -1,6 +1,11 @@
 // Array that holds all book objects
 const myLibrary = [];
 
+// Get form inputs
+const titleInput = document.getElementById('title');
+const authorInput = document.getElementById('author');
+const pagesInput = document.getElementById('pages');
+
 // Class that creates book objects and changes read status
 class Book {
     constructor(title, author, pages, status) {
@@ -135,12 +140,39 @@ function changeFormVisibility() {
     }
 }
 
+// Constraint validation
+titleInput.addEventListener('invalid', () => {
+    titleInput.setCustomValidity('Please enter a title.');
+});
+
+titleInput.addEventListener('input', () => {
+    // Clear message on input
+    titleInput.setCustomValidity('');
+});
+
+authorInput.addEventListener('invalid', () => {
+    authorInput.setCustomValidity('Please enter an author.');
+});
+
+authorInput.addEventListener('input', () => {
+    // Clear message on input
+    authorInput.setCustomValidity('');
+});
+pagesInput.addEventListener('invalid', () => {
+    pagesInput.setCustomValidity('Please enter number of pages.');
+});
+
+pagesInput.addEventListener('input', () => {
+    // Clear message on input
+    pagesInput.setCustomValidity('');
+});
+
 // Add event listener to the form
 myForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const myTitle = document.getElementById('title').value;
-    const myAuthor = document.getElementById('author').value;
-    const myPages = document.getElementById('pages').value;
+    const myTitle = titleInput.value;
+    const myAuthor = authorInput.value;
+    const myPages = pagesInput.value;
     const myCheckbox = document.getElementById('checkbox').checked;
 
     // Pushes submited book to the library
